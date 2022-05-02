@@ -1,0 +1,21 @@
+//
+// THESE SHOULD ALL FAIL (set skip and verbose to true when calling LoadInventoryCSV)
+//
+
+// empty barcode
+, valid name, 1.0
+// empty name
+000000000000,,1.0
+// empty price
+000000000000, valid name,
+
+// non-numeric barcode
+invalidbarcode, valid name, 1.0
+// long barcode
+0000000000000111111, valid name, 1.0
+
+// long name
+000000000000, namenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamename, 1.0
+
+// invalid price
+000000000000, valid name, invalidprice
